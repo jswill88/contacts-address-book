@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import ContactsList from  './components/ContactsList/ContactList';
+import MainForm from './components/MainForm/MainForm';
+import { connect } from 'react-redux'
 
-function App() {
+function App({showForm}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContactsList />
+      {showForm && <MainForm />}
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  showForm: state.showFormReducer,
+})
+
+export default connect(mapStateToProps)(App);
