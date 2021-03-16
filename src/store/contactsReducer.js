@@ -58,7 +58,6 @@ export const updateContact = updated => {
   }
 }
 
-// save new
 export const newContact = contact => {
   return async dispatch => {
     const newContact = await fetchApi(
