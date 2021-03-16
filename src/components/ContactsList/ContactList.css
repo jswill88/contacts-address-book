@@ -2,6 +2,56 @@
   background-color: #579AFF;
   color: #ffffff;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 5px 20px;
+}
+h2 {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+}
 aside {
   width: 20%;
+  min-width: 15em;
+  min-height: 100vh;
+  background-color: #F8FAFF;
+}
+@media (max-width: 600px) {
+  aside {
+    width: 100%;
+  }
+}
+li {
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #444444;
+}
+button {
+  border-radius: 50%;
+  padding: 0;
+  height: calc(2rem + 2px);
+  width: calc(2rem + 2px);
+  border: none;
+  background-color: #579AFF;
+  position: relative;
+  cursor: pointer;
+}
+button div:first-child {
+  background-color: white;
+  position: absolute;
+  height: 80%;
+  width: 2px;
+  top: 10%;
+  left: 1rem;
+}
+button div:last-child {
+  background-color: white;
+  position: absolute;
+  height: 2px;
+  width: 80%;
+  left: 10%;
+  top: 1rem;
 }

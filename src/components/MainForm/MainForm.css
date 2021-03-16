@@ -1,7 +1,153 @@
+
+.emails {
+  padding: .5rem 0;
+  color: #555555;
+  display: flex;
+  height: 1.5rem;
+  align-items: center;
+}
+.addEmail {
+  height: calc(1.4rem + 2px);
+  width: calc(1.4rem + 2px);
+  position: relative;
+}
+.addEmail div:first-child {
+  left: .7rem;
+}
+.addEmail div:last-child {
+  top: .7rem;
+}
+.addEmail + label {
+  color: #579AFF;
+  font-size: .8rem;
+  line-height: 100%;
+  margin: 0 .5rem;
+}
+#newEmailRow {
+  display: flex;
+  align-items: center;
+}
+#newEmailRow input {
+  margin-right: 1rem;
+}
+#newEmailRow button {
+  color: white;
+}
+#newEmailRow input + button + button {
+  background-color: #FF5757;
+  margin-left: .5rem;
+}
+#emailError {
+  color: red;
+  margin-top: 5px;
+}
 li button {
   display: none;
 }
 
 li:hover button {
   display: inline;
+  height: calc(1.4rem + 2px);
+  width: calc(1.4rem + 2px);
+  margin-left: 1rem;
+  background-color: #FF5757;
+  position: relative;
 }
+li:hover button div {
+  background-color: #ffffff;
+  height: 2px;
+  position: absolute;
+  top: .7rem;
+
+}
+form {
+  padding: 3rem 2rem;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+@media (max-width: 600px) {
+  form {
+    width: 80%;
+  }
+}
+label {
+  font-size: .7rem;
+  color: #555555;
+  margin-bottom: .5rem;
+}
+.nameInput {
+  background: #F9FBFF;
+  border: 1px solid #D7E7FF;
+  font-size: 1rem;
+  padding: .5em;
+  display: inline;
+  width: 90%;
+  max-width: 30vw;
+}
+#inputRow {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#inputRow div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#bottomButtonRow {
+  /* margin-top: 40vh; */
+  justify-self: flex-end;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+
+#bottomButtonRow button {
+  width: 5rem;
+  font-size: 1rem;
+  height: 2rem;
+  border-radius: 0%;
+  color: white;
+}
+
+#bottomButtonRow > button {
+  background-color: #FF5757;
+  ;
+}
+#bottomButtonRow > div button:first-of-type {
+  background: #F9FBFF;
+  border: 1px solid #579AFF;
+  color: #000000;
+  @media (min-width: 600px) {
+    margin-right: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  #bottomButtonRow {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  #bottomButtonRow button{
+    width: 25vw;
+    margin-right: 0;
+
+  }
+}
+/* .popUp {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid black;
+  background-color: #579AFF;
+  color: white;
+  min-width: 10rem;
+} */

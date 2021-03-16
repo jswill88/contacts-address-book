@@ -30,14 +30,17 @@ function ContactsList({
 
   return (
     <aside>
-      <h2>Contacts</h2>
-      <button
-        onClick={handleAddNew}
-      >
-        +
+      <header >
+        <h2>Contacts</h2>
+        <button
+          onClick={handleAddNew}
+        >
+        <div></div>
+        <div></div>
       </button>
-        {!!contacts.length &&
-      <ul>
+      </header>
+      {!!contacts.length &&
+        <ul>
           {contacts.map((contact, i) =>
             <li
               key={contact.id}
@@ -47,8 +50,8 @@ function ContactsList({
               {contact.firstName} {contact.lastName}
             </li>
           )}
-      </ul>
-          }
+        </ul>
+      }
     </aside>
   )
 }
