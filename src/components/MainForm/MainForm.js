@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './MainForm.css'
 import { updateContact, newContact, deleteContact } from '../../store/contactsReducer';
 import { setShowForm } from '../../store/showFormReducer';
-import BottomButtonRow from './BottomButtonRow';
+import BottomButtonRow from '../BottomButtonRow/BottomButtonRow';
 
 function MainForm({
   activeContact,
